@@ -1,0 +1,210 @@
+#body-color{
+  background-color: #ABC1D1;
+
+}
+
+
+#body-color .status-bar{
+  z-index: 3;
+  background-color: #ABC1D1;
+}
+#body-color .alt-screen-header{
+  position:fixed;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 2;
+  background-color: #ABC1D1;
+  top: 10px;
+
+}
+
+
+@keyframes fadein{
+  from{
+   opacity: 0;
+  }
+  to{
+    opacity: 1;
+    transform: translateY(40px);
+  }
+}
+
+.main-chat{
+  display: flex;
+  flex-direction:column;
+  top: 180px;
+  align-items: center;
+  animation: fadein 1s ease-in-out;
+}
+
+ .timestamp{
+  margin-top: 120px;
+  background: #92A4B2;
+  color: white;
+  padding: 20px 15px;
+  border-radius: 30px;
+}
+
+@keyframes rowflash{
+ from{
+  transform: translateX(-80px);
+  opacity: 0;
+ }
+ to{
+  transform: none;
+  opacity: 1;
+ }
+}
+
+.Messege-row-flash{
+
+  animation: rowflash 1s ease-in-out;
+}
+
+.Messege-row{
+  display: flex;
+  width:100%;
+  margin-bottom: 25px;
+  
+}
+
+.Messege-row img{
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+  border-radius: 25px;
+}
+
+
+.Messge-row__content-title{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.Messge-row__content-content{
+  display: flex;
+  align-items: flex-end;
+}
+
+.Messge-row__content-info{
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+}
+.Messge-row__content-title,
+.Messge-row__content-time{
+  opacity: 0.4;
+  font-size: 13px;
+}
+
+@keyframes ownflash{
+  from{
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.Messege-row-own{
+  justify-content: flex-end;
+  animation: ownflash 1s ease-in-out;
+}
+
+.Messege-row-own .Messge-row__content-content{
+  flex-direction: row-reverse;
+}
+
+.Messege-row-own .Messge-row__content-info{
+  margin-left: 10px;
+  background-color: var(--yellow);
+  border-top-left-radius:15px;
+  border-top-right-radius: 0px;
+ /* order 로 순서 바꿀 수 있음 */
+}
+
+
+.reply{
+  bottom: 0px;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  padding: 10px 25px;
+  box-sizing: border-box;
+  align-items: center;
+  
+  transition: all 0.3s ease-in-out;
+
+}
+
+.reply__column:first-child{
+  width: 10%;
+}
+
+.reply__column:last-child{
+  width: 90%;
+  position: relative;
+  
+}
+
+
+.reply__column:last-child input{
+  width: 100%;
+  height: 30px;
+  padding: 10px;
+  border: 1px solid rgba(0,0,0,0.4);
+  border-radius: 15px;
+  transition:all 0.3s ease-in-out;
+}
+
+.reply__column>i{
+  opacity: 0.4;
+}
+.reply__column:last-child >i,
+.reply__column:last-child button{
+  position: absolute;
+  top: 10px;
+}
+
+
+.reply__column:last-child >i{
+  right:40px;
+    
+}
+
+.reply__column:last-child> button{
+  right: -20px;
+  background-color: yellow;
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  top:4px;
+}
+
+/* focus-within <form>의 <input> 필드 중 부모안에 있는 필드 중 하나가 포커스도니 경우 전체를 강조할 떄 유용하다 */
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within i, .reply:focus-within button{
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+.reply:focus-within input{
+/* ----니콜썜꺼  */
+    /* width: 98vw;
+   transform: translate(-13%); */
+   /* width: 98vw; */
+  
+  transform:translateX(-13%) translateY(80px);
+  max-width: 115%;
+  width: 100vw;
+   /* max-width: 최대 크기를 부모 요싕 크기로 제한한다 */
+}
+
+.reply:focus-within{
+  /* bottom: -80px; */
+  transform: translateY(-80px);
+}

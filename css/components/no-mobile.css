@@ -1,0 +1,20 @@
+#no-mobile{
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--yellow);
+    width: 100vw;
+    height: 100vh;
+    top: 0;  
+}
+
+/*  top 0 을 하는 이유 위에 div가 먹고있는 공간도 안보이게 하기 위해서 */
+
+@media screen and (max-width:645px ){
+    #no-mobile{
+        display: none;
+    }
+
+}

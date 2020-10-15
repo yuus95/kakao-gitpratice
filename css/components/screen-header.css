@@ -1,0 +1,61 @@
+
+.screen-header{
+  display: flex;
+  justify-content: space-between;
+  padding: 60px 25px 15px 30px;
+  align-items: center;
+  margin-bottom: 20px;
+
+}
+
+
+.screen-header__title{
+font-size: 35px;
+font-weight: 600;
+}
+
+
+.screen-header__icons span{
+margin-left: 25px;
+}
+
+.screen-header__icons{
+  display: flex;
+    align-items: center;
+}
+
+
+.screen_header__cog{
+  display: flex;
+  flex-direction: column;
+  position:relative;
+}
+
+
+.cog__dot{
+  display:flex;
+  justify-content: center;
+position: absolute;
+background: tomato;
+height:5px;;
+width: 5px;
+color: tomato;
+border-radius:4px;
+left: 30px;
+align-items: center;
+}
+
+
+@keyframes rotateCog{
+  from{
+    transform: rotateZ(360deg);
+  }
+  to{
+    transform: none;
+  }
+}
+
+.screen_header__cog i:hover {
+ 
+  animation: rotateCog 1s ease-in-out infinite;
+}

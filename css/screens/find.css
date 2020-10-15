@@ -1,0 +1,132 @@
+
+.Recommended-friend{
+  border-top: var(--main-border);
+  border-bottom: var(--main-border);
+  padding-top: 25px;
+}
+
+.Recommended-friend__title{
+  color: var(--color-gray);
+}
+
+.Recommended-friend span{
+  display: block;
+  font-size: 20px;
+  padding: 120px 103px;
+  color: var(--color-gray);
+text-align: center;
+}
+
+
+.open-chat{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 25px;
+  opacity: 0.4;
+}
+.open-chat__header-right{
+  display: flex;
+  align-items: center
+}
+
+.open-chat__header-right i{
+  opacity: 0.4;
+  margin-left: 5px;
+}
+
+
+.open-post{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
+  align-items:center;
+}
+
+.open-post__column{
+  display: flex;
+  flex-direction: column;
+}
+
+
+.open-post__column-title{
+  font-size: 18px;
+  padding-bottom: 5px;
+  font-style: italic;
+}
+
+.open-post__column-hashtag{
+  opacity: 0.4;
+  text-transform:uppercase;
+  padding-bottom: 5px;
+  font-size: 15px;
+}
+
+.open-post__column-member{
+  display: flex;
+  align-items: center;
+}
+
+.open-post__column-member img{
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  margin-right: 5px;
+}
+
+.open-post__column-member-count{
+  opacity: 0.4;
+
+}
+
+.open-post__column-member-divinders{
+  width:1px;
+  height:15px;
+  background-color: rgba(0 , 0, 0, 0.2);
+  margin: 0px 4px;
+}
+
+.open-post__column-member-status{
+  color: #FF91D5;
+}
+
+.open-post_photo{
+  position: relative;
+}
+
+.open-post_photo img{
+  width:120px;
+  height: 105px;
+  border-radius: 30px;
+}
+
+.open-post_heart-count{
+  display: flex;
+  background-color: rgb(0,0,0,0.4);
+  color:white;
+  align-items: center;
+  padding: 5px;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 10px;
+  right: 10px;
+}
+
+
+@keyframes Heartbeat{
+  0%{
+    transform: none;
+    color: #FF91D5;
+  }
+  50%{
+    color:red;
+    transform: scale(2);
+  }
+  100%{
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post_heart-count:hover i{
+  animation: Heartbeat 1s ease-in-out infinite;
+}

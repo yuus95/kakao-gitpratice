@@ -1,0 +1,41 @@
+.nav{
+  background-color:#F9F9FA;
+  position: fixed;
+  bottom: 0px;
+  width:100%;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  border-top:var(--main-border);
+}
+
+
+.nav__ul{
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link{
+  color:#2F363E;
+  position: relative;
+}
+
+.nav__notification{
+
+  position: absolute;
+  left: 20px;
+  bottom: 15px;
+
+}
+
+.nav__dot{
+  display:flex;
+  justify-content: center;
+position: absolute;
+background: tomato;
+height:5px;;
+width: 5px;
+color: tomato;
+border-radius:4px;
+left: 30px;
+align-items: center;
+}

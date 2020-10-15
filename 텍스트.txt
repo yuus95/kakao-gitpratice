@@ -1,0 +1,16 @@
+오른쪽 방향의 chevron
+background 컬러 안먹힐 땐 color:rgba();
+border 와 본문 사이 padding
+border 와 외부 사이 margin
+text -> text-align :center;
+
+패딩결과를 다똑같이 적용한다
+--horizontal-space: 25px;
+
+태그안에 다넣어준다.ex) friends-screen
+
+friends-screen__channel
+div friend-screen__chaneel-header
+
+sm으로바꾸기
+column 끝쪽으로정렬
